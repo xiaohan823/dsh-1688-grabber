@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "1688 Cookie 助手 (DSH 采图)",
+  "version": "1.0.0",
+  "description": "一键将 1688 登录 Cookie 发送给 DeepSeek Harness 的「1688 采图」插件，避免手动复制。",
+  "permissions": ["cookies", "storage"],
+  "host_permissions": [
+    "https://*.1688.com/*",
+    "http://127.0.0.1:3080/*",
+    "http://localhost:3080/*"
+  ],
+  "action": {
+    "default_title": "发送 1688 Cookie 到 DSH",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
