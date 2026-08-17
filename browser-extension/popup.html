@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>1688 Cookie 助手</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", system-ui, sans-serif;
+      width: 300px;
+      margin: 0;
+      padding: 14px;
+      background: #fafafa;
+      color: #222;
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 12px;
+      color: #666;
+      margin: 0 0 12px;
+      line-height: 1.5;
+    }
+    #status {
+      font-size: 12px;
+      margin-top: 10px;
+      min-height: 16px;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+    button {
+      width: 100%;
+      padding: 9px 0;
+      font-size: 13px;
+      border: none;
+      border-radius: 6px;
+      background: #ff6a00;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+    .ok { color: #2e9e44; }
+    .err { color: #d33; }
+  </style>
+</head>
+<body>
+  <h1>1688 Cookie 助手</h1>
+  <p>使用前请先在 1688.com 登录账号。点击下方按钮，将自动读取当前账号的 Cookie 并发送给 DeepSeek Harness 的「1688 采图」插件。</p>
+  <button id="send">一键发送 Cookie</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
