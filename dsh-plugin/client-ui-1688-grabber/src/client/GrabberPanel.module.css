@@ -1,0 +1,345 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: var(--dsh-fg-secondary, #8a8f98);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.trigger:hover {
+  background: var(--dsh-bg-hover, rgba(128, 128, 128, 0.12));
+  color: var(--dsh-fg-primary, #e8e8e8);
+}
+
+.triggerLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--dsh-fg-secondary, #8a8f98);
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--dsh-fg-tertiary, #6b7280);
+}
+
+.cookieRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--dsh-bg-input, rgba(255, 255, 255, 0.03));
+}
+
+.cookieState {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cookieBadge {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.cookieBadge[data-state='ready'] {
+  color: #57ab5a;
+}
+
+.cookieBadge[data-state='empty'] {
+  color: var(--dsh-fg-tertiary, #6b7280);
+}
+
+.cookieBadge[data-state='unknown'] {
+  color: #e0a33a;
+}
+
+.cookieButton {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--dsh-accent, #4d6bfe);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--dsh-accent, #4d6bfe);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cookieButton:hover {
+  background: rgba(77, 107, 254, 0.12);
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid var(--dsh-border, rgba(128, 128, 128, 0.25));
+  border-radius: 6px;
+  background: var(--dsh-bg-input, rgba(255, 255, 255, 0.04));
+  color: var(--dsh-fg-primary, #e8e8e8);
+  font: inherit;
+  font-size: 13px;
+}
+
+.input:focus,
+.links:focus {
+  outline: none;
+  border-color: var(--dsh-accent, #4d6bfe);
+}
+
+.dirRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dirPath {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--dsh-border, rgba(128, 128, 128, 0.25));
+  border-radius: 6px;
+  background: var(--dsh-bg-input, rgba(255, 255, 255, 0.04));
+  color: var(--dsh-fg-secondary, #8a8f98);
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dirPath[data-set='true'] {
+  color: var(--dsh-fg-primary, #e8e8e8);
+}
+
+.dirButton {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border: 1px solid var(--dsh-accent, #4d6bfe);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--dsh-accent, #4d6bfe);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dirButton:hover {
+  background: rgba(77, 107, 254, 0.12);
+}
+
+.dirButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.links {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid var(--dsh-border, rgba(128, 128, 128, 0.25));
+  border-radius: 6px;
+  background: var(--dsh-bg-input, rgba(255, 255, 255, 0.04));
+  color: var(--dsh-fg-primary, #e8e8e8);
+  font: inherit;
+  font-size: 13px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.startButton,
+.stopButton,
+.openButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.startButton {
+  background: var(--dsh-accent, #4d6bfe);
+  color: #fff;
+}
+
+.startButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.stopButton {
+  background: rgba(220, 60, 60, 0.16);
+  color: #e05c5c;
+}
+
+.error {
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(220, 60, 60, 0.12);
+  color: #e05c5c;
+  font-size: 13px;
+}
+
+.progress {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--dsh-fg-secondary, #8a8f98);
+}
+
+.taskId {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.runningBadge,
+.doneBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.runningBadge {
+  background: rgba(77, 107, 254, 0.16);
+  color: #8fa3ff;
+}
+
+.doneBadge {
+  background: rgba(46, 160, 67, 0.16);
+  color: #57ab5a;
+}
+
+.progressCount {
+  margin-left: auto;
+}
+
+.offerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.offerRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: var(--dsh-bg-input, rgba(255, 255, 255, 0.03));
+  font-size: 13px;
+}
+
+.offerRow[data-failed='true'] {
+  background: rgba(220, 60, 60, 0.08);
+}
+
+.offerId {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--dsh-fg-primary, #e8e8e8);
+  flex: none;
+}
+
+.subject {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--dsh-fg-secondary, #8a8f98);
+}
+
+.offerStats {
+  flex: none;
+  display: inline-flex;
+  gap: 10px;
+  color: var(--dsh-fg-secondary, #8a8f98);
+  font-size: 12px;
+}
+
+.offerError {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #e05c5c;
+  font-size: 12px;
+}
+
+.openRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.openButton {
+  background: rgba(77, 107, 254, 0.14);
+  color: #8fa3ff;
+}
